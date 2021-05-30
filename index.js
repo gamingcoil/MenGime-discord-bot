@@ -7,12 +7,12 @@ client.on('ready', ()=>{
     console.log('This bot is online!');
 })
 
-client.on('message', msg=>{
+client.on('message', message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
     const args = message.content.slice(prefix.length).spilt(/ +/);
     const command = args.shift().toLowerCase();
-    if(msg.content === "helpme"){
-        msg.reply('צריך אתכם<@829024828287221789>');
+    if(message.content === "helpme"){
+        message.reply('צריך אתכם<@829024828287221789>');
     }
 })
 
