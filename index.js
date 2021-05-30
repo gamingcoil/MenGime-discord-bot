@@ -14,7 +14,7 @@ client.on('message', message =>{
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
     
-    if(command.content === 'helpme'){
+    if(command.content === 'help-me'){
         message.channel.send('צריך אתכם<@829024828287221789>');
     }
 });
