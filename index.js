@@ -9,9 +9,11 @@ client.on('ready', ()=>{
 
 client.on('message', message=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
+    
     const args = message.content.slice(prefix.length).spilt(/ +/);
     const command = args.shift().toLowerCase();
-    if(message.content === "helpme"){
+    
+    if(command.content === "helpme"){
         message.reply('צריך אתכם<@829024828287221789>');
     }
 });
