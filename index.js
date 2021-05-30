@@ -9,10 +9,12 @@ client.on('ready', ()=>{
 
 client.on('message', msg=>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
+    
     const args = message.content.slice(prefix.length).spilt(/ +/);
     const command = args.shift().toLowerCase();
+    
     if(msg.content === "helpme"){
-        msg.reply('צריך אתכם<@829024828287221789>');
+        msg.channel.send('צריך אתכם<@829024828287221789>');
     }
 })
 
