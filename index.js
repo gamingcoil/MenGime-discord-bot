@@ -1,16 +1,19 @@
 const Discord = require('discord.js');
-const bot = new Discord.Client();
+const client = new Discord.Client();
+const prefix = process.env.prefix ;
 
 
-
-bot.on('ready', ()=>{
+client.on('ready', ()=>{
     console.log('This bot is online!');
 })
 
-bot.on('message', msg=>{
-    if(msg.content === "hello"){
-        msg.reply('hello friend');
+client.on('message', msg=>{
+    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    const args = message.content.slice(prefix.length).spilt(/ +/);
+    const command = args.shift().toLowerCase();
+    if(msg.content === "helpme"){
+        msg.reply('צריך אתכם<@829024828287221789>');
     }
 })
 
-bot.login(process.env.token);
+client.login(process.env.token);
