@@ -8,9 +8,9 @@ client.on('ready', ()=>{
 })
 
 client.on('message', msg=>{
-    if(!message.content.startsWith(prefix) || message.author.bot) return;
+    if(!msg.content.startsWith(prefix) || msg.author.bot) return;
     
-    const args = message.content.slice(prefix.length).spilt(/ +/);
+    const args = msg.content.slice(prefix.length).spilt(/ +/);
     const command = args.shift().toLowerCase();
     
     if(msg.content === "helpme"){
