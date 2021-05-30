@@ -13,6 +13,7 @@ client.on('message', message=>{
     const command = args.shift().toLowerCase();
     if(message.content === "helpme"){
         message.reply('צריך אתכם<@829024828287221789>');
-
+    }
+});
 
 client.login(process.env.token);
