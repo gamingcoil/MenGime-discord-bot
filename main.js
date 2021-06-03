@@ -13,6 +13,8 @@ client.on('message', message =>{
 
     if (command == 'help-me'){
         message.channel.send(message.author.username + ' צריך עזרה <@&829024828328771595> <@&829024828287221789>')
+    }else if (command == 'help'){
+        message.channel.send('רשימת הפקודות באתר https://mg-dis-cmds.herokuapp.com/')
     }
 })
 
