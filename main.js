@@ -12,7 +12,7 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
 
     if (command == 'help-me'){
-        message.channel.send(message.author.username + 'צריך עזרה @Staff @High Staff')
+        message.channel.send(message.author.username + ' צריך עזרה <@&829024828328771595> <@&829024828287221789>')
     }
 })
 
