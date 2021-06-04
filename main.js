@@ -17,6 +17,9 @@ client.on('message', message =>{
         message.channel.send('רשימת הפקודות באתר https://mg-dis-cmds.herokuapp.com/')
     }else if (command == 'youtube'){
         message.channel.send('קישור לערוץ מנגיים: https://www.youtube.com/channel/UCFAAuM9m5ao_-uZMEL_94NQ')
+    }else if (command == 'mg_dm'){
+        message.channel.send('מבקש ממנגיים לצוטט איתך')
+        message.author.dmChannel.send('hi');
     }
 })
 
