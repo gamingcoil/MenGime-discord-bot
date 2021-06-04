@@ -4,6 +4,17 @@ const client = new Discord.Client();
 
 const prefix = '&';
 
+const fs = require('fs');
+
+client.commands = new Discord.Collection();
+
+const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
+for(const file of commandFiles){
+    const command = require('./commands/${file}');
+
+    client.commands.set(command.name, command);
+}
+
 client.on('message', message =>{
     if(!message.content.startsWith(prefix) || message.author.bot) return;
 
@@ -12,17 +23,15 @@ client.on('message', message =>{
     const command = args.shift().toLowerCase();
 
     if (command == 'help-me'){
-        message.channel.send(message.author.username + ' צריך עזרה <@&829024828328771595> <@&829024828287221789>')
+        client.commands.get('help-me').execute(message, args);
     }else if (command == 'help'){
-        message.channel.send('רשימת הפקודות באתר https://mg-dis-cmds.herokuapp.com/')
+        client.commands.get('help').execute(message, args);
     }else if (command == 'youtube'){
-        message.channel.send('קישור לערוץ מנגיים: https://www.youtube.com/channel/UCFAAuM9m5ao_-uZMEL_94NQ')
+        client.commands.get('youtube').execute(message, args);
     }else if (command == 'mg-dm'){
-        message.channel.send('מבקש ממנגיים לצוטט איתך')
-        const channel01 = client.channels.cache.find(channel => channel.id === "850286030778793984")
-        channel01.send("<@" + message.author.id + "> " + message.author.displayAvatarURL({ size: 4096, dynamic: true}))
-        
-        
+        client.commands.get('mg-dm').execute(message, args);
+    }else if (command == ''){
+        message.channel.send('')
     }
 })
 
