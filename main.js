@@ -30,8 +30,8 @@ client.on('message', message =>{
         client.commands.get('youtube').execute(message, args);
     }else if (command == 'mg-dm'){
         client.commands.get('mg-dm').execute(message, args);
-    }else if (command == ''){
-        message.channel.send('')
+    }else if (command == 'fortnite-mg'){
+        client.commands.get('fnmg').execute(message, args);
     }
 })
 
