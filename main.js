@@ -20,7 +20,7 @@ client.on('message', message =>{
     }else if (command == 'mg-dm'){
         message.channel.send('מבקש ממנגיים לצוטט איתך')
         const channel01 = client.channels.cache.find(channel => channel.id === "826796038316621866")
-        channel01.send(message.author.tag + message.author.displayAvatarURL({ size: 4096, dynamic: true}))
+        channel01.send(message.author.tag + " " + message.author.displayAvatarURL({ size: 4096, dynamic: true}))
         // 850286030778793984
     }
 })
