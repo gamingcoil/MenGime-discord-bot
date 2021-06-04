@@ -19,10 +19,10 @@ client.on('message', message =>{
         message.channel.send('קישור לערוץ מנגיים: https://www.youtube.com/channel/UCFAAuM9m5ao_-uZMEL_94NQ')
     }else if (command == 'mg-dm'){
         message.channel.send('מבקש ממנגיים לצוטט איתך')
-        const channel01 = client.channels.cache.find(channel => channel.id === "826796038316621866")
+        const channel01 = client.channels.cache.find(channel => channel.id === "850286030778793984")
         channel01.send("<@" + message.author.id + "> " + message.author.displayAvatarURL({ size: 4096, dynamic: true}))
         
-        // 850286030778793984
+        // 
     }
 })
 
