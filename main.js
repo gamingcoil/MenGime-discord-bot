@@ -15,6 +15,8 @@ client.on('message', message =>{
         message.channel.send(message.author.username + ' צריך עזרה <@&829024828328771595> <@&829024828287221789>')
     }else if (command == 'help'){
         message.channel.send('רשימת הפקודות באתר https://mg-dis-cmds.herokuapp.com/')
+    }else if (command == 'youtube'){
+        message.channel.send('קישור לערוץ מנגיים: https://www.youtube.com/channel/UCFAAuM9m5ao_-uZMEL_94NQ')
     }
 })
 
