@@ -39,9 +39,9 @@ client.on('message', message =>{
 
 client.once('ready', ()=>{
     console.log('This bot is online!');
-    const channel_stats = client.channels.cache.find(channel => channel.id === "850286030778793984")
+    const channel_stats = client.channels.cache.find(channel => channel.id === "826796038316621866")
     channel_stats.send('הבוט פועל :green_circle:')
     console.log('נשלח אישור פעולה');
 });
-
+// 850286030778793984
 client.login(process.env.token);
