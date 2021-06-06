@@ -39,6 +39,7 @@ client.on('message', message =>{
 
 client.once('ready', ()=>{
     console.log('This bot is online!');
+    client.user.setActivity('My Prefix is: &', { type: "WATCHING"})
     const channel_stats = client.channels.cache.find(channel => channel.id === "829024830216077324")
     channel_stats.send('הבוט פועל :green_circle:')
     console.log('נשלח אישור פעולה');
