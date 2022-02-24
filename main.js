@@ -45,4 +45,4 @@ client.once('ready', ()=>{
     console.log('נשלח אישור פעולה');
 });
 // 850286030778793984
-client.login('ODQ4NDE2NTYyNDEwMTYwMTM4.YLMTfw.LRWCxaOujvLvFS4vULQ2MoK1V8A');
+client.login(pocess.env.token);
