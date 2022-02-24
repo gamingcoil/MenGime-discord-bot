@@ -45,4 +45,4 @@ client.once('ready', ()=>{
     console.log('נשלח אישור פעולה');
 });
 // 850286030778793984
-client.login(process.env.token);
+client.login(secrets.TOKEN);
